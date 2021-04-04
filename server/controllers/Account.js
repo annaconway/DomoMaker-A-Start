@@ -13,6 +13,7 @@ const signupPage = (req, res) => {
 const logout = (req, res) => {
   res.redirect('/');
 };
+
 const login = (request, response) => {
   const req = request;
   const res = response;
@@ -54,6 +55,7 @@ const signup = (request, response) => {
       salt,
       password: hash,
     };
+
     const newAccount = new Account.AccountModel(accountData);
 
     const savePromise = newAccount.save();
